@@ -1,0 +1,3 @@
+I regret to say it, but i ran into a bug.
+the bug is that I can't specify forexample the education class assosiated with user table is empty or not.
+otherwise all of the registration of the program has been completed.
