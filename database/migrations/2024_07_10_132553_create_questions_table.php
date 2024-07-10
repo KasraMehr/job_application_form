@@ -13,6 +13,14 @@ return new class extends Migration
     {
         Schema::create('questions', function (Blueprint $table) {
             $table->id();
+            $table->string('category');
+            $table->string('text');
+            $table->string('first_option');
+            $table->string('second_option');
+            $table->string('third_option');
+            $table->string('fourth_option');
+            $table->enum("answer", ['first_option', 'second_option', 'third_option', 'fourth_option']);
+            $table->string("comment")->nullable();
             $table->timestamps();
         });
     }
