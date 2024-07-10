@@ -40,20 +40,6 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="age" class="col-md-4 col-form-label text-md-end">{{ __('Age') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="age" type="date" class="form-control @error('age') is-invalid @enderror" name="age" value="{{ old('age') }}" required autocomplete="name" autofocus>
-
-                                @error('age')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
                             <label for="gender" class="col-md-4 col-form-label text-md-end">{{ __('Gender') }}</label>
 
                             <div class="col-md-6">
@@ -72,34 +58,6 @@
                                 <input id="PhoneNumber" type="tel" class="form-control @error('PhoneNumber') is-invalid @enderror" name="PhoneNumber" value="{{ old('PhoneNumber') }}" required autocomplete="PhoneNumber" autofocus>
 
                                 @error('PhoneNumber')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label for="country" class="col-md-4 col-form-label text-md-end">{{ __('Country') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="country" type="country" class="form-control @error('country') is-invalid @enderror" name="country" value="{{ old('country') }}" required autocomplete="country" autofocus>
-
-                                @error('country')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label for="city" class="col-md-4 col-form-label text-md-end">{{ __('City') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="city" type="text" class="form-control @error('city') is-invalid @enderror" name="city" value="{{ old('city') }}" required autocomplete="city" autofocus>
-
-                                @error('city')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

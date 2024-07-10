@@ -54,11 +54,8 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'age' => ['required', 'date'],
             'gender' => ['required', 'string'],
             'PhoneNumber' =>['required', 'string', 'max:16', 'unique:users'],
-            'country' =>['required', 'string', 'max:255'],
-            'city' => ['required', 'string', 'max:255'],
             'address' => ['required', 'string', 'max:1000'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
@@ -75,34 +72,11 @@ class RegisterController extends Controller
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
-            'age' => $data['age'],
             'gender' => $data['gender'],
             'PhoneNumber' => $data['PhoneNumber'],
-            'country' => $data['country'],
-            'city' => $data['city'],
             'address' => $data['address'],
             'password' => Hash::make($data['password']),
         ]);
-    }
-
-    public function full_registration($id)
-    {
-        $user = User::findOrFail($id);
-        if(empty($user->education()))
-        {
-            return route('education.reg');
-        }
-        else
-        {
-            if(empty($user->work()))
-            {
-                return route('works.reg');
-            }
-            else
-            {
-                return route('education.reg');
-            }
-        }
     }
 
     public function create_education(Request $request)
@@ -110,7 +84,7 @@ class RegisterController extends Controller
         $input = $request->all();
         Education::create([
             'degree' => $input['degree'],
-            'begin' => $input['brgin'],
+            'begin' => $input['begin'],
             'end' => $input['end']
         ]);
         return redirect()->route('home')->with('success', 'education log recorded successfully!');

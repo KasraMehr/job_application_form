@@ -15,14 +15,6 @@
                     @endif
 
                     {{ __('You are logged in!') }}
-                    <form method="POST" action="{{route('full_reg', Auth::user()->id)}}">
-                    @csrf
-                        <div>
-                            <button type="submit" class="btn btn-primary">
-                                    {{ __('complete registration') }}
-                                </button>
-                        </div>
-                    </form>
                 </div>
             </div>
         </div>

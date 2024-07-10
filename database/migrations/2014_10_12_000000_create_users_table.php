@@ -16,11 +16,8 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->date('age');
             $table->string('gender');
             $table->string('PhoneNumber');
-            $table->string('country');
-            $table->string('city');
             $table->string('address');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
@@ -28,6 +25,7 @@ return new class extends Migration
             $table->timestamps();
         });
     }
+
 
     /**
      * Reverse the migrations.
