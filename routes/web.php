@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\QuestionsController;
+use App\Http\Controllers\QuizController;
 use App\Models\Questions;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -31,4 +32,6 @@ Route::group(['middleware' => \App\Http\Middleware\checkAuth::class], function()
     Route::get('/questions/{id}/edit', [QuestionsController::class, 'edit'])->name('question.edit');
     Route::put('/questions/{id}', [QuestionsController::class, 'update'])->name('question.update');
     Route::delete('/questions/{id}', [QuestionsController::class, 'destroy'])->name('question.destroy');
+    Route::get('/test', [QuizController::class, 'quiz_questions'])->name('test');
+    Route::post('/test', [QuizController::class, 'test_result_calculator'])->name('test_res');
 });

@@ -5,7 +5,9 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">{{ __('questions') }}</div>
+                    <div class="card-header">{{ __('questions') }} <a style="margin-left: 40rem" href="{{route('question.create_page')}}"><button class="btn btn-info btn-sm">create a question</button></a></div>
+
+
 
                     <div class="card-body">
                         <table id="example" class="table nowrap dt-responsive align-middle table-hover table-bordered" style="width:100%">
@@ -52,6 +54,9 @@
                             @endforeach
                             </tbody>
                         </table>
+                        <div style="align-content: center">
+                            <a style="margin-left: 45%" href="{{route('home')}}"><button class="btn btn-info btn-sm">Dashboard</button></a>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -17,7 +17,7 @@
 
                         <a href="{{route('questions.index')}}"><button class="btn btn-primary btn-sm"> questions</button></a>
                         <br><hr><br>
-                        <a href="{{route('question.create_page')}}"><button class="btn btn-info btn-sm"> take a test</button></a>
+                        <a href="{{route('test')}}"><button class="btn btn-info btn-sm"> take a test</button></a>
                 </div>
             </div>
         </div>
